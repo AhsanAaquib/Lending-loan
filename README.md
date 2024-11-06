@@ -1,10 +1,17 @@
 Lending Club Loans:
+
 Brief Introduction
+
 LendingClub is a US peer-to-peer lending company, headquartered in San Francisco, California.[3] It was the first peer-to-peer lender to register its offerings as securities with the Securities and Exchange Commission (SEC), and to offer loan trading on a secondary market. LendingClub is the world's largest peer-to-peer lending platform.
+
 Objective
+
 Building a model that predicts whether the borrower can payback the loan or not, so in the future we can assess the customer and whether or not he's likely to payback his loan.
+
 Main Strategy
+
 Our main objective is not lending a person that is not going to payback his loan which would be a Type 1 error, Therefore we must depend on the recall score of the loans not payed category by doing methods that might reduce our accuracy but ultimately increasing our recall.
+
 Step 1:
 Exploratory Data Analysis and Feature Engineering
 Getting a general idea of datatypes and null values for each column
@@ -18,7 +25,9 @@ Extracting the zip-code from the address column.
 Encoding columns and getting dummy variables.
 Filling na values with the mean for values that don't have a high correlation with the loan status.
 Using Random Forest Regressor to predict the missing values in the mort_acc column as it is highly correlated to the loan_status.
+
 Step 2:
+
 Building the model
 Splitting the data into train and test data 80, 20 split
 Taking the test data and upsampling the fully paid portion to get a realistic summary of the metrics
